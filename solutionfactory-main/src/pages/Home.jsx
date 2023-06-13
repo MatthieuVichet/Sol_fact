@@ -7,7 +7,7 @@ export default function Home(){
         <div className="home_page">
             <Header />
             <h1>Home page</h1>
-            <p>hdddh</p>
+            <p>hd</p>
             <Footer />
         </div>
     );
