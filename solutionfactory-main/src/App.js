@@ -7,6 +7,7 @@ import LoanApplication from './pages/LoanApplication';
 import LoanVisualization from './pages/LoanVisualization';
 import LoanSimulator from './pages/LoanSimulator';
 import Login from './pages/Login';
+import SignIn from './pages/AccountCreation';
 import './style/App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/loan_simulator' element={<LoanSimulator />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/signin' element={<SignIn />} />
         <Route path='*' element={<Error404 />} />
 
         </Routes>
