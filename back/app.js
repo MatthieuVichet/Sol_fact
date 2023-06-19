@@ -2,7 +2,14 @@
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
+
 const { router, authenticate } = require('./routes/auth');
+
+// Enable CORS
+app.use(cors({
+	origin: 'http://localhost:3000'
+}));
 
 // Parse the request body as JSON
 app.use(express.json());
@@ -29,6 +36,6 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-	console.log('Server is running on port 3000');
+app.listen(8080, () => {
+	console.log('Server is running on port 8080');
 });
