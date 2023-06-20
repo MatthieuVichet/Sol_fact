@@ -18,7 +18,9 @@ app.use(express.json());
 app.use('/login', router);
 
 app.use('/auth', authenticate, (req, res) => {
-	res.send('logged in');
+	res.status(200).json({
+		message: 'Authenticated',
+	});
 });
 
 // Mount the user routes

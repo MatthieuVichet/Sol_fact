@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
 			expiry: Date.now() + validationTime
 		});
 
-		res.send({
+		res.status(200).json({
 			message: 'Login successful',
 			token,
 			user_id: user.id,

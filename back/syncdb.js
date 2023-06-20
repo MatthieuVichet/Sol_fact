@@ -38,7 +38,7 @@ sequelize
 		User.create({
 			firstname: 'admin',
 			lastname: 'admin',
-			email: 'admin',
+			email: 'admin@gmail.com',
 			password: 'admin',
 			dob: '1999-01-01',
 			is_verified: true,

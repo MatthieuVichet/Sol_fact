@@ -3,11 +3,19 @@ import Footer from "../components/Footer";
 import FileUploader from "../components/fileSubmit";
 import "../style/LoanApplication.css";
 import SimulationButton from "../components/simulationButton";
-import React, { useState } from "react";
-import vars from "../constants";
+import authentificate_user from "../authentification";
+import { useEffect } from "react";
 
 export default function LoanApplication() {
-  console.log(vars);
+  useEffect(() => {
+    const authenticateUser = async () => {
+      let res = await authentificate_user();
+      if (res === false) {
+        window.location.href = "/login";
+      }
+    };
+    authenticateUser();
+  }, []);
 
   const handleUpload = () => {
     // Perform the upload logic here
